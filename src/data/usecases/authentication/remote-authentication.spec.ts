@@ -25,6 +25,7 @@ describe('RemoteAuthentication', () => {
     // Act
     await sut.auth();
 
+    // Assert
     expect(httpPostClientSpy.url).toBe(url);
   });
 });
