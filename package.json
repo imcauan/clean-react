@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "test:watch": "pnpm test -- --watch",
+    "test:watch": "pnpm test --watch",
     "test:staged": "pnpm test -- --findRelatedTests",
     "test:ci": "pnpm test -- --coverage",
     "prepare": "husky",
