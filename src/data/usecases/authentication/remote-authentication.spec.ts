@@ -1,20 +1,7 @@
-import { HttpPostClient } from '@/data/protocols';
+import { makeHttpPostClient } from '@/data/test';
 import { RemoteAuthentication } from '@/data/usecases';
 
 const url = 'any_url';
-
-function makeHttpPostClient() {
-  class HttpPostClientSpy implements HttpPostClient {
-    url?: string;
-
-    async post(url: string): Promise<void> {
-      this.url = url;
-      return null;
-    }
-  }
-
-  return new HttpPostClientSpy();
-}
 
 type SutTypes = {
   // TODO: remove this any
