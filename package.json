@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
+    "test:watch": "pnpm test -- --watch",
+    "test:staged": "pnpm test -- --findRelatedTests",
+    "test:ci": "pnpm test -- --coverage",
     "prepare": "husky",
     "format": "prettier --write .",
     "type:check": "tsc --pretty --noEmit"
