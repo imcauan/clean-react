@@ -5,20 +5,20 @@ import {
   HttpStatusCode,
 } from '@/data/protocols';
 
-export function makeHttpPostClient() {
-  class HttpPostClientSpy implements HttpPostClient {
-    url?: string;
-    body?: object;
-    response: HttpResponse = {
-      statusCode: HttpStatusCode.OK,
-    };
+export class HttpPostClientSpy<T, R> implements HttpPostClient<T, R> {
+  url?: string;
+  body?: T;
+  response: HttpResponse<R> = {
+    statusCode: HttpStatusCode.OK,
+  };
 
-    async post(params: HttpPostParams): Promise<HttpResponse> {
-      this.url = params.url;
-      this.body = params.body;
-      return this.response;
-    }
+  async post(params: HttpPostParams<T>): Promise<HttpResponse<R>> {
+    this.url = params.url;
+    this.body = params.body;
+    return this.response;
   }
+}
 
-  return new HttpPostClientSpy();
+export function makeHttpPostClient<T, R>() {
+  return new HttpPostClientSpy<T, R>();
 }
