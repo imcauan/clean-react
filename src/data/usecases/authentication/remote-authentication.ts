@@ -1,5 +1,5 @@
 import { HttpPostClient, HttpStatusCode } from '@/data/protocols';
-import { InvalidCredentialsError } from '@/domain/errors';
+import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors';
 import { AuthenticationParams } from '@/domain/usecases';
 
 export class RemoteAuthentication {
@@ -15,10 +15,12 @@ export class RemoteAuthentication {
     });
 
     switch (response.statusCode) {
+      case HttpStatusCode.OK:
+        break;
       case HttpStatusCode.UNAUTHORIZED:
         throw new InvalidCredentialsError();
       default:
-        return null;
+        throw new UnexpectedError();
     }
   }
 }
