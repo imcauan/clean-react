@@ -10,7 +10,7 @@ export function makeHttpPostClient() {
     url?: string;
     body?: object;
     response: HttpResponse = {
-      statusCode: HttpStatusCode.NO_CONTENT,
+      statusCode: HttpStatusCode.OK,
     };
 
     async post(params: HttpPostParams): Promise<HttpResponse> {
