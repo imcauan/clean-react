@@ -1,7 +1,6 @@
 import { makeHttpPostClient } from '@/data/test';
 import { RemoteAuthentication } from '@/data/usecases';
-
-const url = 'any_url';
+import { faker } from '@faker-js/faker';
 
 type SutTypes = {
   // TODO: remove this any
@@ -9,7 +8,7 @@ type SutTypes = {
   sut: RemoteAuthentication;
 };
 
-function makeSut(): SutTypes {
+function makeSut(url: string = faker.internet.url()): SutTypes {
   const httpPostClientSpy = makeHttpPostClient();
   return {
     httpPostClientSpy,
@@ -20,7 +19,8 @@ function makeSut(): SutTypes {
 describe('RemoteAuthentication', () => {
   it('should call HttpClient with correct URL', async () => {
     // Arrange
-    const { sut, httpPostClientSpy } = makeSut();
+    const url = faker.internet.url();
+    const { sut, httpPostClientSpy } = makeSut(url);
 
     // Act
     await sut.auth();
