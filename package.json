@@ -24,6 +24,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-unused-imports": "^4.3.0",
+    "faker": "^6.6.6",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
