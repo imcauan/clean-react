@@ -25,6 +25,7 @@ export default defineConfig([
       '@typescript-eslint/interface-name-prefix': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-redeclare': 'off',
+      'no-undef': 'off',
       'unused-imports/no-unused-vars': [
         'warn',
         {
