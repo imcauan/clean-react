@@ -17,7 +17,7 @@ function makeSut(): SutTypes {
 }
 
 describe('AxiosHttpClient', () => {
-  it('should call axios with correct url', async () => {
+  it('should call axios with correct url and verb', async () => {
     // Arrange
     const url = faker.internet.url();
     const { sut } = makeSut();
@@ -26,6 +26,6 @@ describe('AxiosHttpClient', () => {
     await sut.post({ url });
 
     // Assert
-    expect(mockedAxios).toHaveBeenCalledWith(url);
+    expect(mockedAxios.post).toHaveBeenCalledWith(url);
   });
 });
