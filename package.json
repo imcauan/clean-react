@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open",
+    "dev": "vite",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "pnpm test --watch",
     "test:staged": "pnpm test -- --findRelatedTests",
@@ -18,8 +18,6 @@
     "quality:fix": "pnpm lint:fix && pnpm format"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.28.6",
-    "@babel/preset-react": "^7.28.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.39.1",
@@ -30,8 +28,8 @@
     "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.48.1",
     "@typescript-eslint/parser": "^8.48.1",
+    "@vitejs/plugin-react": "^5.1.2",
     "babel-jest": "^30.2.0",
-    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
@@ -48,17 +46,17 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.1",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.3"
+    "vite": "^7.3.1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
     "axios": "^1.13.2",
     "jest-environment-jsdom": "^30.2.0",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18"
   }
 }
