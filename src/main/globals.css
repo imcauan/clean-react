@@ -11,6 +11,7 @@
 
 @theme {
   --color-white: var(--white);
+  --color-background: var(--background);
   --color-black: var(--black);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
