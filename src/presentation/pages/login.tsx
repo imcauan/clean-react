@@ -1,9 +1,9 @@
+import { LoginHeader } from "@/presentation/components";
+
 export function LoginPage() {
   return (
     <div className="flex flex-col w-screen h-screen justify-between bg-background">
-      <header className="bg-primary">
-        <h1 className="p-4 text-white">4Dev - Enquetes para programadores</h1>
-      </header>
+      <LoginHeader />
       <form className="flex items-center justify-center">
         <div className="flex flex-col gap-4 bg-white p-10 shadow-md">
           <h2 className="text-2xl font-bold text-center uppercase text-primary">
