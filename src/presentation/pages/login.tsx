@@ -1,4 +1,4 @@
-import { Footer, LoginHeader } from "@/presentation/components";
+import { Footer, FormInput, LoginHeader } from "@/presentation/components";
 
 export function LoginPage() {
   return (
@@ -9,30 +9,18 @@ export function LoginPage() {
           <h2 className="text-2xl font-bold text-center uppercase text-primary">
             Login
           </h2>
-          <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Digite seu email"
-              className="border w-md border-primary leading-10 rounded-md pl-3"
-            />
-            <span className="text-red-600 mt-1">Email inválido</span>
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="password" className="mb-1">
-              Senha
-            </label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Digite seu senha"
-              className="border w-md border-primary leading-10 rounded-md pl-3"
-            />
-            <span className="text-red-600 mt-1">Senha inválida</span>
-          </div>
+          <FormInput
+            label="Email"
+            name="email"
+            type="email"
+            placeholder="Digite seu email"
+          />
+          <FormInput
+            label="Senha"
+            type="password"
+            name="password"
+            placeholder="Digite seu senha"
+          />
           <button
             type="submit"
             className="bg-primary w-md text-white rounded-md p-2 cursor-pointer hover:opacity-90 flex justify-center items-center"
