@@ -1,4 +1,9 @@
-import { Footer, FormInput, LoginHeader } from "@/presentation/components";
+import {
+  Footer,
+  FormInput,
+  FormStatus,
+  LoginHeader,
+} from "@/presentation/components";
 
 export function LoginPage() {
   return (
@@ -30,9 +35,7 @@ export function LoginPage() {
           <a className="text-center text-primary hover:underline cursor-pointer">
             Criar conta
           </a>
-          <div className="w-full flex justify-center my-4">
-            <p className="text-primary-light">Erro</p>
-          </div>
+          <FormStatus />
         </div>
       </form>
       <Footer />
