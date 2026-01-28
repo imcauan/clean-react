@@ -1,4 +1,4 @@
-import { LoginHeader } from "@/presentation/components";
+import { Footer, LoginHeader } from "@/presentation/components";
 
 export function LoginPage() {
   return (
@@ -47,7 +47,7 @@ export function LoginPage() {
           </div>
         </div>
       </form>
-      <footer className="bg-primary h-8">hello!</footer>
+      <Footer />
     </div>
   );
 }
